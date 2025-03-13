@@ -1,6 +1,13 @@
 name: CI
 
 on:
+  workflow_dispatch:
+        branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - '.github/**'
+      - '!.github/workflows/*'
   push:
     branches:
       - main
